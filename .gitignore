@@ -1,0 +1,53 @@
+# =====================
+# Python (FastAPI / RAG backend)
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+venv/
+.venv/
+
+# =====================
+# Node (React frontend)
+# =====================
+node_modules/
+dist/
+.vite/
+
+# =====================
+# Logs
+# =====================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# IDE (VS Code)
+# =====================
+.vscode/
+.idea/
+
+# =====================
+# RAG / AI files (important for your project)
+# =====================
+data/chroma_db/
+data/faiss_index/
+*.faiss
+*.pkl
+
+
+
+# =====================
+# Cache
+# =====================
+.cache/
