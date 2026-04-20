@@ -1,3 +1,4 @@
+
 # StudyBuddy AI 📚🤖
 
 > Turn your notes, PDFs, and study materials into an intelligent AI tutor.
@@ -16,11 +17,11 @@ Traditional AI chatbots rely on general knowledge and often hallucinate.
 
 StudyBuddy AI is different — it answers **only from your study material**.
 
-✔ Personalized learning experience  
-✔ Accurate, grounded responses  
-✔ Better revision and exam preparation  
-✔ Reduced hallucinations  
-✔ Faster concept understanding  
+- ✔ Personalized learning experience  
+- ✔ Accurate, grounded responses  
+- ✔ Better revision and exam preparation  
+- ✔ Reduced hallucinations  
+- ✔ Faster concept understanding  
 
 ---
 
@@ -63,7 +64,7 @@ StudyBuddy AI is different — it answers **only from your study material**.
 
 ### AI / RAG Pipeline
 - LangChain  
-- FAISS (Vector Database)  
+- ChromaDB (Vector Database)  
 - Sentence Transformers  
 
 ### Document Processing
@@ -76,83 +77,93 @@ StudyBuddy AI is different — it answers **only from your study material**.
 ---
 
 ## 📁 Project Structure
+
+```bash
 StudyBuddy-AI/
 │
 ├── frontend/
 │
 ├── backend/
-│ ├── app/
-│ │ ├── routes/
-│ │ ├── schemas/
-│ │ ├── config/
-│ │
-│ ├── main.py
+│   ├── app/
+│   │   ├── routes/
+│   │   ├── schemas/
+│   │   ├── config/
+│   │
+│   ├── main.py
 │
 ├── rag_engine/
-│ ├── loaders/
-│ ├── processing/
-│ ├── embeddings/
-│ ├── vectorstore/
-│ ├── retrieval/
-│ ├── prompts/
-│ ├── pipeline.py
+│   ├── loaders/
+│   ├── processing/
+│   ├── embeddings/
+│   ├── vectorstore/
+│   ├── retrieval/
+│   ├── prompts/
+│   ├── pipeline.py
 │
 ├── data/
 ├── requirements.txt
 └── README.md
-
+````
 
 ---
-🏗️ System Architecture
+
+## 🏗️ System Architecture
+
 The system follows a modular RAG-based architecture:
 
-- Frontend (React) handles user interaction and file uploads  
-- Backend (FastAPI) processes requests and manages APIs  
-- RAG Engine extracts, embeds, and retrieves context from documents  
-- ChromaDB stores vector embeddings for semantic search  
-- LLM generates final responses using retrieved context  
+* Frontend (React) handles user interaction and file uploads
+* Backend (FastAPI) processes requests and manages APIs
+* RAG Engine extracts, embeds, and retrieves context from documents
+* ChromaDB stores vector embeddings for semantic search
+* LLM generates final responses using retrieved context
 
+![System Architecture](docs/system-architecture.jpeg)
 
+---
 
-![System Architecture](docs/system-architecture.png)
+## 🗄️ Database Design
 
-Database Design
 The database is designed around document-centric retrieval:
 
-- Each document is split into chunks  
-- Each chunk is converted into embeddings  
-- Embeddings are stored in ChromaDB with metadata  
-- Metadata includes document name, chunk index, and source  
+* Each document is split into chunks
+* Each chunk is converted into embeddings
+* Embeddings are stored in ChromaDB with metadata
+* Metadata includes document name, chunk index, and source
+
 ![Database Schema](docs/database-design.png)
 
+---
 
 ## 📊 Key Design Decisions
 
-- Used **RAG instead of fine-tuning** → faster & scalable  
-- Chose **ChromaDB** for lightweight vector search  
-- Modular pipeline design for easy upgrades  
-- FastAPI for async performance and simplicity  
+* Used **RAG instead of fine-tuning** → faster & scalable
+* Chose **ChromaDB** for lightweight vector search
+* Modular pipeline design for easy upgrades
+* FastAPI for async performance and simplicity
 
 ---
 
 ## 🚀 Future Improvements
 
-- Multi-user authentication system  
-- Chat history storage  
-- Streaming responses  
-- Support for images + OCR  
-- Mobile-friendly UI  
+* Multi-user authentication system
+* Chat history storage
+* Streaming responses
+* Support for images + OCR
+* Mobile-friendly UI
 
 ---
 
 ## 📌 Status
 
-🚧 Active development project  
-🎯 Built for learning + portfolio showcase  
+🚧 Active development project
+🎯 Built for learning + portfolio showcase
 
 ---
 
 ## 👨‍💻 Author
 
 Built by a passionate AI/ML student exploring real-world LLM applications.
-~varsavarniga
+
+**~varsavarniga**
+
+```
